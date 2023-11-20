@@ -175,3 +175,5 @@ Failed to handle request: socket hang up
 2023-11-20T13:28:59.247Z jambox.core Reset
 2023-11-20T13:29:19.160Z jambox.core Reset
 2023-11-20T13:29:24.320Z jambox.core Reset
+2023-11-20T13:34:20.895Z jambox.config Update existing config /Users/mhamlin/dev/personal/jambox-cy-task-config-issue/jambox.config.js
+2023-11-20T13:34:20.895Z jambox.core Reset
