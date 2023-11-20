@@ -6,29 +6,31 @@ describe('Navigation', () => {
         '**/foo': {
           preferNetwork: false,
           status: 200,
-          body: `You're visiting foo!`
+          body: {text:`You're visiting foo!`}
         }
       }
     })
-    cy.visit('https://local.example.com/')
+    cy.visit('/')
     cy.get("[data-test-id='link']").click();
     cy.url().should('contain', 'foo')
     cy.get('body' ).should('contain', `You're visiting foo!`)
+    cy.task('jambox.reset');
   })
   it('[working] should navigate to the foo page', () => {
-    cy.visit('https://local.example.com/')
+    cy.visit('/')
     cy.task('jambox.config', {
       stub: {
         '**/foo': {
           preferNetwork: false,
           status: 200,
-          body: `You're visiting foo!`
+          body: {text:`You're visiting foo!`}
         }
       }
     })
     cy.get("[data-test-id='link']").click();
     cy.url().should('contain', 'foo')
     cy.get('body' ).should('contain', `You're visiting foo!`)
+    cy.task('jambox.reset');
   })
 })
 
